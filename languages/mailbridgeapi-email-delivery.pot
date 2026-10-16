@@ -1,0 +1,1005 @@
+# Copyright (C) 2026 MailBridgeAPI
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MailBridgeAPI Email Delivery 1.0.6\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailbridgeapi-email-delivery\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-14T05:01:33+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: mailbridgeapi-email-delivery\n"
+
+#. Plugin Name of the plugin
+#: mailbridgeapi-email-delivery.php
+msgid "MailBridgeAPI Email Delivery"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: mailbridgeapi-email-delivery.php
+msgid "https://mailbridgeapi.com/wordpress-plugin/"
+msgstr ""
+
+#. Description of the plugin
+#: mailbridgeapi-email-delivery.php
+msgid "Sends WordPress email through a locked MailBridgeAPI mailbox without storing SMTP credentials, with delivery logs and diagnostics."
+msgstr ""
+
+#. Author of the plugin
+#: mailbridgeapi-email-delivery.php
+msgid "MailBridgeAPI"
+msgstr ""
+
+#. Author URI of the plugin
+#: mailbridgeapi-email-delivery.php
+msgid "https://mailbridgeapi.com/"
+msgstr ""
+
+#: includes/class-admin.php:26
+msgid "Connection"
+msgstr ""
+
+#: includes/class-admin.php:28
+#: includes/class-admin.php:32
+#: includes/class-admin.php:184
+msgid "Sent emails"
+msgstr ""
+
+#: includes/class-admin.php:33
+msgid "Statistics"
+msgstr ""
+
+#: includes/class-admin.php:34
+#: includes/class-admin.php:209
+msgid "Diagnostics"
+msgstr ""
+
+#: includes/class-admin.php:35
+#: includes/class-admin.php:219
+msgid "Documentation"
+msgstr ""
+
+#: includes/class-admin.php:48
+msgid "Configure"
+msgstr ""
+
+#: includes/class-admin.php:56
+msgid "When MailBridgeAPI Email Delivery is connected, outgoing email recipient addresses, subjects, message bodies, headers and up to two attachments are sent to MailBridgeAPI for SMTP delivery. The plugin stores recipient address, subject, delivery state, provider response, message identifier and timestamp in the WordPress database for the configured retention period. The MailBridgeAPI dashboard email and password are used only during sign-in; the password is not stored. API credentials are encrypted locally using the WordPress authentication salt."
+msgstr ""
+
+#. translators: %s: MailBridgeAPI privacy policy URL.
+#: includes/class-admin.php:58
+#, php-format
+msgid "Review the <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">MailBridgeAPI privacy policy</a> for service-side processing and retention."
+msgstr ""
+
+#: includes/class-admin.php:67
+#: includes/class-health.php:42
+#: includes/class-health.php:44
+msgid "Mailbox connection"
+msgstr ""
+
+#: includes/class-admin.php:67
+msgid "Route every WordPress email through one controlled MailBridgeAPI mailbox."
+msgstr ""
+
+#: includes/class-admin.php:87
+msgid "Selected mailbox · locked"
+msgstr ""
+
+#: includes/class-admin.php:88
+msgid "Email delivery active"
+msgstr ""
+
+#: includes/class-admin.php:88
+msgid "Subscription expired"
+msgstr ""
+
+#: includes/class-admin.php:90
+msgid "MailBridgeAPI delivery is paused."
+msgstr ""
+
+#: includes/class-admin.php:90
+msgid "Renew the subscription before WordPress email can be sent again."
+msgstr ""
+
+#: includes/class-admin.php:90
+msgid "Manage subscription"
+msgstr ""
+
+#: includes/class-admin.php:91
+msgid "Potential email transport conflict."
+msgstr ""
+
+#. translators: %s: comma-separated list of potentially conflicting plugin slugs.
+#: includes/class-admin.php:91
+#, php-format
+msgid "Another delivery plugin is active: %s. Keep only one plugin that replaces wp_mail()."
+msgstr ""
+
+#: includes/class-admin.php:97
+msgid "Mailbox selection is protected"
+msgstr ""
+
+#: includes/class-admin.php:97
+msgid "This site cannot display or switch to another mailbox while connected. Disconnect first to protect agencies and clients sharing one MailBridgeAPI account."
+msgstr ""
+
+#: includes/class-admin.php:99
+msgid "Local delivery log"
+msgstr ""
+
+#: includes/class-admin.php:99
+msgid "Keep site-specific recipient, subject and delivery status metadata. Message bodies and attachments are never stored in WordPress by this plugin."
+msgstr ""
+
+#: includes/class-admin.php:99
+msgid "Retention"
+msgstr ""
+
+#. translators: %d: retention period in days.
+#: includes/class-admin.php:99
+#, php-format
+msgid "%d days"
+msgstr ""
+
+#. translators: %d: retention period in days.
+#: includes/class-admin.php:99
+msgid "Delete settings and logs when the plugin is uninstalled"
+msgstr ""
+
+#. translators: %d: retention period in days.
+#: includes/class-admin.php:99
+msgid "Save settings"
+msgstr ""
+
+#. translators: %d: retention period in days.
+#: includes/class-admin.php:100
+msgid "Disconnect this site"
+msgstr ""
+
+#. translators: %d: retention period in days.
+#: includes/class-admin.php:100
+msgid "Disconnecting removes the locally stored encrypted keys. Native WordPress mail resumes until another mailbox is selected."
+msgstr ""
+
+#. translators: %d: retention period in days.
+#: includes/class-admin.php:100
+msgid "Disconnect MailBridgeAPI from this WordPress site?"
+msgstr ""
+
+#. translators: %d: retention period in days.
+#: includes/class-admin.php:100
+msgid "Disconnect mailbox"
+msgstr ""
+
+#: includes/class-admin.php:107
+msgid "Secure account connection"
+msgstr ""
+
+#: includes/class-admin.php:107
+msgid "Connect your MailBridgeAPI account"
+msgstr ""
+
+#: includes/class-admin.php:107
+msgid "Enter the same email address and password used for the MailBridgeAPI dashboard. The password is sent over HTTPS for authentication and is never stored by WordPress."
+msgstr ""
+
+#: includes/class-admin.php:108
+msgid "Dashboard email address"
+msgstr ""
+
+#: includes/class-admin.php:108
+msgid "Dashboard password"
+msgstr ""
+
+#: includes/class-admin.php:108
+msgid "Connect securely"
+msgstr ""
+
+#: includes/class-admin.php:109
+msgid "Designed for production stores."
+msgstr ""
+
+#: includes/class-admin.php:109
+msgid "Credentials are restricted to administrators, protected by WordPress nonces and capabilities, and encrypted at rest with your WordPress authentication salt."
+msgstr ""
+
+#: includes/class-admin.php:117
+msgid "Step 2 · select once"
+msgstr ""
+
+#: includes/class-admin.php:117
+msgid "Choose the mailbox for this WordPress site"
+msgstr ""
+
+#: includes/class-admin.php:117
+msgid "After selection, all other account mailboxes disappear from this site. Switching requires a full disconnect and a new authenticated connection."
+msgstr ""
+
+#: includes/class-admin.php:117
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-admin.php:118
+msgid "No mailbox is available on this account. Add one in the MailBridgeAPI dashboard first."
+msgstr ""
+
+#: includes/class-admin.php:123
+msgid "Use this mailbox"
+msgstr ""
+
+#: includes/class-admin.php:123
+msgid "Configure SMTP in MailBridgeAPI before using this mailbox for WordPress delivery."
+msgstr ""
+
+#: includes/class-admin.php:131
+msgid "Outgoing email"
+msgstr ""
+
+#: includes/class-admin.php:131
+msgid "Incoming email"
+msgstr ""
+
+#: includes/class-admin.php:131
+msgid "Configured"
+msgstr ""
+
+#: includes/class-admin.php:131
+msgid "Not configured"
+msgstr ""
+
+#: includes/class-admin.php:131
+msgid "This protocol is not configured for the selected mailbox."
+msgstr ""
+
+#. translators: %s: SMTP or IMAP protocol name.
+#: includes/class-admin.php:138
+#, php-format
+msgid "Test %s"
+msgstr ""
+
+#. translators: %s: SMTP or IMAP protocol name.
+#: includes/class-admin.php:140
+#, php-format
+msgid "%s connection successful"
+msgstr ""
+
+#. translators: %s: SMTP or IMAP protocol name.
+#: includes/class-admin.php:142
+#, php-format
+msgid "%s connection failed"
+msgstr ""
+
+#. translators: %s: localized date and time of the connection test.
+#: includes/class-admin.php:146
+#, php-format
+msgid "Last tested: %s"
+msgstr ""
+
+#: includes/class-admin.php:148
+msgid "Testing…"
+msgstr ""
+
+#. translators: %s: MailBridgeAPI remote message identifier.
+#: includes/class-admin.php:162
+#, php-format
+msgid "Message ID: %s"
+msgstr ""
+
+#. translators: %s: localized date and time of the real test email.
+#: includes/class-admin.php:165
+#, php-format
+msgid "Tested at: %s"
+msgstr ""
+
+#: includes/class-admin.php:169
+msgid "End-to-end verification"
+msgstr ""
+
+#: includes/class-admin.php:169
+msgid "Send a real test email"
+msgstr ""
+
+#: includes/class-admin.php:169
+msgid "This sends a real message through WordPress, MailBridgeAPI and the selected SMTP server. The provider response is stored in the local delivery log."
+msgstr ""
+
+#: includes/class-admin.php:170
+msgid "Destination email address"
+msgstr ""
+
+#: includes/class-admin.php:170
+msgid "Sending test…"
+msgstr ""
+
+#: includes/class-admin.php:170
+msgid "Send test email"
+msgstr ""
+
+#: includes/class-admin.php:170
+msgid "An active subscription and configured SMTP connection are required."
+msgstr ""
+
+#: includes/class-admin.php:171
+msgid "Test email accepted"
+msgstr ""
+
+#: includes/class-admin.php:171
+msgid "Test email failed"
+msgstr ""
+
+#: includes/class-admin.php:184
+msgid "Delivery results generated by this WordPress site."
+msgstr ""
+
+#: includes/class-admin.php:186
+msgid "All statuses"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:186
+#: includes/class-admin.php:187
+#: includes/class-admin.php:200
+#: includes/class-admin.php:201
+msgid "Delivered"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:186
+#: includes/class-admin.php:200
+#: includes/class-admin.php:201
+msgid "Errors"
+msgstr ""
+
+#: includes/class-admin.php:186
+msgid "Recipient, subject or message ID"
+msgstr ""
+
+#: includes/class-admin.php:186
+msgid "Filter"
+msgstr ""
+
+#: includes/class-admin.php:186
+msgid "Export CSV"
+msgstr ""
+
+#: includes/class-admin.php:186
+msgid "Permanently delete every local MailBridgeAPI delivery log?"
+msgstr ""
+
+#: includes/class-admin.php:186
+msgid "Clear logs"
+msgstr ""
+
+#: includes/class-admin.php:187
+#: includes/class-privacy.php:55
+msgid "Recipient"
+msgstr ""
+
+#: includes/class-admin.php:187
+#: includes/class-privacy.php:56
+msgid "Subject"
+msgstr ""
+
+#: includes/class-admin.php:187
+msgid "Status"
+msgstr ""
+
+#: includes/class-admin.php:187
+#: includes/class-privacy.php:58
+msgid "Provider response"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:187
+#: includes/class-admin.php:201
+#: includes/class-privacy.php:60
+msgid "UTC date"
+msgstr ""
+
+#: includes/class-admin.php:187
+msgid "No WordPress email has been recorded yet."
+msgstr ""
+
+#: includes/class-admin.php:187
+msgid "(No subject)"
+msgstr ""
+
+#: includes/class-admin.php:187
+msgid "Error"
+msgstr ""
+
+#: includes/class-admin.php:198
+msgid "Email statistics"
+msgstr ""
+
+#: includes/class-admin.php:198
+msgid "A site-specific view of WordPress email delivery."
+msgstr ""
+
+#: includes/class-admin.php:199
+msgid "Reporting period"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:199
+#, php-format
+msgid "Last %d days"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:199
+msgid "Apply"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:200
+msgid "Total requests"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:200
+msgid "Success rate"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:201
+#, php-format
+msgid "Daily activity · last %d days"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:201
+msgid "Requests"
+msgstr ""
+
+#. translators: %d: statistics reporting period in days.
+#: includes/class-admin.php:201
+msgid "No activity yet."
+msgstr ""
+
+#: includes/class-admin.php:209
+msgid "Verify the complete WordPress-to-MailBridgeAPI delivery environment."
+msgstr ""
+
+#: includes/class-admin.php:211
+msgid "Ready"
+msgstr ""
+
+#: includes/class-admin.php:211
+msgid "Action required"
+msgstr ""
+
+#: includes/class-admin.php:211
+msgid "Recommendation"
+msgstr ""
+
+#: includes/class-admin.php:212
+msgid "Safe to share with support"
+msgstr ""
+
+#: includes/class-admin.php:212
+msgid "Sanitized diagnostic report"
+msgstr ""
+
+#: includes/class-admin.php:212
+msgid "The report excludes API keys, passwords, mailbox addresses, recipients and email contents."
+msgstr ""
+
+#: includes/class-admin.php:212
+msgid "Copied"
+msgstr ""
+
+#: includes/class-admin.php:212
+msgid "Copy report"
+msgstr ""
+
+#: includes/class-admin.php:219
+msgid "How this WordPress transport works."
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "What the plugin intercepts"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "After a mailbox is selected, the plugin short-circuits wp_mail() and submits each message to MailBridgeAPI. This includes WordPress password messages, contact forms, WooCommerce transactional messages and compatible plugin notifications."
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "If disconnected, WordPress returns to its original mail transport."
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Supported mail data"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "HTML and plain-text messages"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Reply-To and up to three visible CC recipients per API request"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Up to two attachments, maximum 5 MB each and 10 MB total"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Additional recipients are delivered as separate private requests"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Security model"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Only administrators can connect, test or disconnect."
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "The dashboard password is never stored."
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Tokens and API keys are encrypted before database storage."
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "The chosen mailbox remains hidden and locked until disconnect."
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Support and service documents"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "MailBridgeAPI documentation"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Privacy policy"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Terms and conditions"
+msgstr ""
+
+#: includes/class-admin.php:220
+msgid "Contact support"
+msgstr ""
+
+#: includes/class-admin.php:229
+msgid "Enter a valid dashboard email address and password."
+msgstr ""
+
+#: includes/class-admin.php:237
+msgid "MailBridgeAPI authenticated the account but did not return the credentials required for email delivery."
+msgstr ""
+
+#: includes/class-admin.php:255
+msgid "Account verified. Select and test the mailbox reserved for this WordPress site."
+msgstr ""
+
+#: includes/class-admin.php:263
+msgid "The mailbox selection session expired. Sign in again."
+msgstr ""
+
+#: includes/class-admin.php:273
+msgid "This mailbox is not available to the authenticated account."
+msgstr ""
+
+#: includes/class-admin.php:276
+msgid "Configure SMTP for this mailbox before using it as the WordPress email transport."
+msgstr ""
+
+#: includes/class-admin.php:296
+msgid "Mailbox connected. WordPress email now uses MailBridgeAPI."
+msgstr ""
+
+#: includes/class-admin.php:305
+#: includes/class-admin.php:308
+msgid "Choose a valid mailbox test."
+msgstr ""
+
+#: includes/class-admin.php:312
+msgid "The requested mailbox is not connected to this WordPress site."
+msgstr ""
+
+#: includes/class-admin.php:323
+msgid "The requested mailbox is not available in this connection session."
+msgstr ""
+
+#: includes/class-admin.php:328
+msgid "The secure dashboard session expired. Disconnect and sign in again."
+msgstr ""
+
+#: includes/class-admin.php:338
+msgid "The connection test did not return a result."
+msgstr ""
+
+#: includes/class-admin.php:353
+msgid "MailBridgeAPI was disconnected. WordPress has returned to its original mail transport."
+msgstr ""
+
+#: includes/class-admin.php:364
+msgid "MailBridgeAPI settings saved."
+msgstr ""
+
+#: includes/class-admin.php:372
+msgid "Enter a valid destination email address."
+msgstr ""
+
+#: includes/class-admin.php:375
+msgid "Connect a mailbox with SMTP configured before sending a test email."
+msgstr ""
+
+#: includes/class-admin.php:378
+msgid "Renew the MailBridgeAPI subscription before sending a test email."
+msgstr ""
+
+#. translators: 1: website host name, 2: UTC date and time.
+#: includes/class-admin.php:381
+#, php-format
+msgid "MailBridgeAPI delivery test · %1$s · %2$s UTC"
+msgstr ""
+
+#. translators: %s: website home URL.
+#: includes/class-admin.php:383
+#, php-format
+msgid ""
+"This is a real MailBridgeAPI delivery test from %s.\n"
+"\n"
+"WordPress submitted this message to MailBridgeAPI and the selected SMTP server accepted it.\n"
+"\n"
+"No action is required."
+msgstr ""
+
+#: includes/class-admin.php:387
+msgid "No MailBridgeAPI delivery record was created. Another plugin may have intercepted wp_mail(). Review the Diagnostics page."
+msgstr ""
+
+#: includes/class-admin.php:398
+msgid "The real test email was accepted for delivery."
+msgstr ""
+
+#. translators: %d: number of deleted local email delivery log rows.
+#: includes/class-admin.php:405
+#, php-format
+msgid "%d local delivery log was deleted."
+msgid_plural "%d local delivery logs were deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-admin.php:417
+msgid "The CSV export could not be created."
+msgstr ""
+
+#: includes/class-admin.php:446
+msgid "Mailbox selection cancelled. No mailbox was connected."
+msgstr ""
+
+#: includes/class-admin.php:473
+#: includes/class-admin.php:480
+msgid "You are not allowed to manage MailBridgeAPI."
+msgstr ""
+
+#: includes/class-admin.php:473
+#: includes/class-admin.php:480
+msgid "Access denied"
+msgstr ""
+
+#: includes/class-api-client.php:67
+msgid "The API is unreachable. Check outbound HTTPS access, DNS and the hosting firewall."
+msgstr ""
+
+#. translators: %d: HTTP response status code.
+#: includes/class-api-client.php:71
+#, php-format
+msgid "The API returned HTTP %d. Try again or contact MailBridgeAPI support."
+msgstr ""
+
+#: includes/class-api-client.php:74
+msgid "The MailBridgeAPI endpoint is reachable over HTTPS."
+msgstr ""
+
+#: includes/class-api-client.php:101
+msgid "MailBridgeAPI could not be reached. Check outbound HTTPS access, DNS and the hosting firewall, then try again."
+msgstr ""
+
+#: includes/class-api-client.php:107
+msgid "MailBridgeAPI returned an unexpected response."
+msgstr ""
+
+#: includes/class-api-client.php:111
+msgid "Email delivery failed."
+msgstr ""
+
+#: includes/class-api-client.php:149
+msgid "The secure MailBridgeAPI dashboard could not be reached."
+msgstr ""
+
+#: includes/class-api-client.php:155
+msgid "MailBridgeAPI returned an unreadable response."
+msgstr ""
+
+#: includes/class-api-client.php:158
+msgid "The MailBridgeAPI request failed."
+msgstr ""
+
+#: includes/class-api-client.php:173
+msgid "The API credentials are missing or invalid. Disconnect and reconnect the mailbox."
+msgstr ""
+
+#: includes/class-api-client.php:174
+msgid "The account API key is missing. Disconnect and reconnect the mailbox."
+msgstr ""
+
+#: includes/class-api-client.php:175
+msgid "The mailbox API key is missing. Disconnect and reconnect the mailbox."
+msgstr ""
+
+#: includes/class-api-client.php:176
+msgid "The MailBridgeAPI subscription has expired. Renew it before sending email."
+msgstr ""
+
+#: includes/class-api-client.php:177
+msgid "SMTP is not configured for this mailbox. Complete the SMTP settings in the MailBridgeAPI dashboard."
+msgstr ""
+
+#: includes/class-api-client.php:178
+msgid "The SMTP server rejected the message. Test SMTP and verify the host, port, security mode and credentials."
+msgstr ""
+
+#: includes/class-api-client.php:179
+msgid "The recipient address was rejected. Verify the destination email address."
+msgstr ""
+
+#: includes/class-api-client.php:181
+msgid "Review the mailbox configuration and the MailBridgeAPI activity log for details."
+msgstr ""
+
+#. translators: %s: current PHP version.
+#: includes/class-health.php:26
+#, php-format
+msgid "PHP %s is active. Version 7.4 or newer is required."
+msgstr ""
+
+#. translators: %s: current WordPress version.
+#: includes/class-health.php:28
+#, php-format
+msgid "WordPress %s is active. Version 6.5 or newer is recommended."
+msgstr ""
+
+#: includes/class-health.php:30
+msgid "PHP version"
+msgstr ""
+
+#: includes/class-health.php:31
+msgid "WordPress version"
+msgstr ""
+
+#: includes/class-health.php:32
+msgid "Credential encryption"
+msgstr ""
+
+#: includes/class-health.php:32
+msgid "OpenSSL is available for encrypted local credentials."
+msgstr ""
+
+#: includes/class-health.php:32
+msgid "OpenSSL is missing. The plugin cannot protect stored API credentials."
+msgstr ""
+
+#: includes/class-health.php:33
+msgid "HTTP transport"
+msgstr ""
+
+#: includes/class-health.php:33
+msgid "cURL is available for HTTPS requests."
+msgstr ""
+
+#: includes/class-health.php:33
+msgid "cURL is unavailable. WordPress may use another HTTP transport, but cURL is recommended."
+msgstr ""
+
+#. translators: %d: MailBridgeAPI HTTP response time in milliseconds.
+#: includes/class-health.php:38
+#, php-format
+msgid "Response time: %d ms."
+msgstr ""
+
+#: includes/class-health.php:39
+msgid "MailBridgeAPI availability"
+msgstr ""
+
+#: includes/class-health.php:42
+msgid "No mailbox is connected. Open MailBridgeAPI → Connection to sign in and select one."
+msgstr ""
+
+#: includes/class-health.php:44
+msgid "A mailbox is securely connected to this site."
+msgstr ""
+
+#: includes/class-health.php:45
+msgid "Subscription"
+msgstr ""
+
+#: includes/class-health.php:45
+msgid "The stored MailBridgeAPI subscription status is active."
+msgstr ""
+
+#: includes/class-health.php:45
+msgid "The subscription is expired. Renew it before sending email."
+msgstr ""
+
+#. translators: %s: comma-separated list of potentially conflicting plugin slugs.
+#: includes/class-health.php:51
+#, php-format
+msgid "Potential conflict detected: %s. Keep only one wp_mail transport active."
+msgstr ""
+
+#: includes/class-health.php:52
+msgid "Other email delivery plugins"
+msgstr ""
+
+#: includes/class-health.php:52
+msgid "No known competing SMTP or email delivery plugin is active."
+msgstr ""
+
+#. translators: %s: UTC date and time of the latest successful delivery.
+#: includes/class-health.php:56
+#, php-format
+msgid "The latest successful delivery was recorded at %s UTC."
+msgstr ""
+
+#: includes/class-health.php:57
+msgid "Last successful delivery"
+msgstr ""
+
+#: includes/class-health.php:57
+msgid "No successful delivery has been recorded yet. Send a real test email from the Connection page."
+msgstr ""
+
+#: includes/class-health.php:105
+msgid "MailBridgeAPI email delivery"
+msgstr ""
+
+#: includes/class-health.php:117
+msgid "MailBridgeAPI requires attention"
+msgstr ""
+
+#: includes/class-health.php:117
+msgid "MailBridgeAPI has recommendations"
+msgstr ""
+
+#: includes/class-health.php:117
+msgid "MailBridgeAPI is ready to deliver email"
+msgstr ""
+
+#: includes/class-health.php:122
+msgid "The connection, runtime and API checks completed successfully."
+msgstr ""
+
+#: includes/class-health.php:123
+msgid "Open MailBridgeAPI diagnostics"
+msgstr ""
+
+#: includes/class-health.php:134
+msgid "Plugin version"
+msgstr ""
+
+#: includes/class-health.php:135
+msgid "Mailbox connected"
+msgstr ""
+
+#: includes/class-health.php:135
+#: includes/class-health.php:136
+msgid "Yes"
+msgstr ""
+
+#: includes/class-health.php:135
+#: includes/class-health.php:136
+msgid "No"
+msgstr ""
+
+#: includes/class-health.php:136
+msgid "Subscription active"
+msgstr ""
+
+#: includes/class-health.php:137
+#: includes/class-health.php:138
+msgid "Available"
+msgstr ""
+
+#: includes/class-health.php:137
+#: includes/class-health.php:138
+msgid "Missing"
+msgstr ""
+
+#: includes/class-health.php:148
+#: includes/class-health.php:152
+#: includes/class-health.php:156
+#: includes/class-health.php:159
+msgid "Selected mailbox availability"
+msgstr ""
+
+#: includes/class-health.php:148
+msgid "The secure session is missing. Disconnect and reconnect the mailbox."
+msgstr ""
+
+#: includes/class-health.php:152
+msgid "Reconnect the mailbox if the secure session has expired."
+msgstr ""
+
+#: includes/class-health.php:156
+msgid "The selected mailbox is available and has SMTP configured."
+msgstr ""
+
+#: includes/class-health.php:156
+msgid "The selected mailbox exists but SMTP is not configured."
+msgstr ""
+
+#: includes/class-health.php:159
+msgid "The selected mailbox is no longer available to this account. Disconnect and select another mailbox."
+msgstr ""
+
+#: includes/class-mailer.php:46
+msgid "No valid recipient address was supplied."
+msgstr ""
+
+#: includes/class-mailer.php:51
+msgid "Embedded wp_mail images are not supported by this transport. Use hosted image URLs or regular attachments."
+msgstr ""
+
+#: includes/class-mailer.php:74
+msgid "A maximum of 100 recipients is allowed per wp_mail call."
+msgstr ""
+
+#: includes/class-mailer.php:123
+msgid "MailBridgeAPI could not deliver one or more recipients. Review MailBridgeAPI → Sent emails."
+msgstr ""
+
+#: includes/class-mailer.php:192
+msgid "MailBridgeAPI currently supports up to two attachments per email."
+msgstr ""
+
+#: includes/class-mailer.php:199
+#: includes/class-mailer.php:208
+msgid "An email attachment could not be read."
+msgstr ""
+
+#: includes/class-mailer.php:204
+msgid "Attachments must be 5 MB or smaller each and 10 MB or smaller in total."
+msgstr ""
+
+#: includes/class-plugin.php:63
+msgid "MailBridgeAPI Email Delivery requires PHP 7.4 or newer."
+msgstr ""
+
+#: includes/class-plugin.php:67
+msgid "MailBridgeAPI Email Delivery requires the OpenSSL PHP extension."
+msgstr ""
+
+#: includes/class-privacy.php:16
+#: includes/class-privacy.php:25
+msgid "MailBridgeAPI delivery log"
+msgstr ""
+
+#: includes/class-privacy.php:52
+msgid "MailBridgeAPI sent email delivery log"
+msgstr ""
+
+#: includes/class-privacy.php:57
+msgid "Delivery status"
+msgstr ""
+
+#: includes/class-privacy.php:59
+msgid "Remote message ID"
+msgstr ""

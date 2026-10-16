@@ -1,0 +1,9 @@
+/.git
+/.github
+/.gitignore
+/.distignore
+/README.md
+/*.log
+/vendor
+/node_modules
+
