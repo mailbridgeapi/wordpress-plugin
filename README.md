@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mailbridgeapi/mailbridgeapi/main/assets/logo-mark.png" alt="MailBridgeAPI logo" width="112">
+</p>
+
 # MailBridgeAPI Email Delivery for WordPress
 
 Send WordPress and WooCommerce email through a mailbox managed by MailBridgeAPI without storing SMTP credentials in WordPress.
